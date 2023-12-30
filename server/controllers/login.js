@@ -14,7 +14,7 @@ module.exports = async (req, res) => {
 
         if (matchPassword) {
             const token = jwt.sign(
-                { _id: dbUser._id, name: dbUser.name, email }, process.env.JWT_LOGIN_TOKEN, process.env.JWT_TOKEN_EXPIRE
+                { _id: dbUser._id, name: dbUser.name, email }, process.env.JWT_LOGIN_TOKEN, process.env.WT_TOKEN_EXPIRE,
 
             );
 
