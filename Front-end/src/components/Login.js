@@ -35,13 +35,13 @@ const Login = () => {
                         <form className='flex w-[300px] mx-auto flex-col pt-2 gap-2'>
                            
                             <input value={email}
-                                onChange={(e) => setemail(e.target.email)}
+                                onChange={(e) => setemail(e.target.value)}
                                 type="email"
                                 placeholder='Email' 
                                 className="input_style"
                                 />
                             <input value={password}
-                                onChange={(e) => setpassword(e.target.password)}
+                                onChange={(e) => setpassword(e.target.value)}
                                 type="password"
                                 placeholder='Password' 
                                 className="input_style"
