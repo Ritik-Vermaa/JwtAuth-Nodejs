@@ -2,3 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components{
+    .icon_wrapper{
+        @apply w-[50px] h-[50px] border-2 border-gray-300 rounded-full grid place-items-center text-[20px] cursor-pointer hover:border-accent;
+    }
+    .input_style {
+        @apply bg-[#f4f8f7] outline-accent px-4 py-2;
+    }
+}
