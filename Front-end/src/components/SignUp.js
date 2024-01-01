@@ -1,11 +1,12 @@
 "use client"
-import React, { useState } from 'react'
+import React, { useState ,useEffect  } from 'react'
 import Link from 'next/link';
 import { FaFacebookF, FaGoogle, FaInstagram } from "react-icons/fa6";
 import axios from 'axios';
 import { baseURL } from '@/utils/constant';
 import { toast } from 'react-toastify';
 import { useRouter } from 'next/navigation';
+import { isLogin } from '@/utils/auth';
 
 
 
@@ -16,6 +17,17 @@ const SignUp = () => {
     const [password, setpassword] = useState("");
 
     const router = useRouter()
+
+    
+  useEffect(() => {
+    
+const authenticate = async()=>{
+      if (await isLogin()) {
+        router.push("/");
+      }
+    }
+    authenticate()
+  }, []);
 
     const handleSubmit = (e) => {
         e.preventDefault();
